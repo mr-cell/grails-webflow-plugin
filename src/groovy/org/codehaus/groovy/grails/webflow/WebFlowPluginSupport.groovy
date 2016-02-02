@@ -64,11 +64,11 @@ class WebFlowPluginSupport {
         }
         conversationService(DefaultConversionService)
         sep(SpelExpressionParser)
-        expressionParser(WebFlowSpringELExpressionParser, sep ,conversationService)
+        flowExpressionParser(WebFlowSpringELExpressionParser, sep ,conversationService)
 
         flowBuilderServices(FlowBuilderServices) {
             conversionService = conversationService
-            expressionParser =  expressionParser
+            expressionParser =  flowExpressionParser
             viewFactoryCreator = viewFactoryCreator
         }
 
